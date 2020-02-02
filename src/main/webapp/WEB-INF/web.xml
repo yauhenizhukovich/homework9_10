@@ -1,7 +1,44 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.0"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+   http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+    <display-name>Archetype Created Web Application</display-name>
 
-<web-app>
-  <display-name>Archetype Created Web Application</display-name>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>com.gmail.supersonicleader.app.controller.UserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/users</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddUserServlet</servlet-name>
+        <servlet-class>com.gmail.supersonicleader.app.controller.AddUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddUserServlet</servlet-name>
+        <url-pattern>/users/add</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteUserServlet</servlet-name>
+        <servlet-class>com.gmail.supersonicleader.app.controller.DeleteUserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteUserServlet</servlet-name>
+        <url-pattern>/users/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
 </web-app>
